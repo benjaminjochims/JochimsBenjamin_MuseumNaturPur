@@ -1,0 +1,96 @@
+
+}
+.welcome-screen-container {
+    width: 90%;
+    max-width: 100vw;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.button {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+.button:hover {
+    background-color: #0056b3;
+}
+.hidden {
+    display: none;
+}
+
+#welcome-screen {
+    
+}
+
+.teaser-text-quiz {
+grid-area: 2 / 3 / 6 / 9; 
+    padding-top: var(--spacing-72);
+
+
+        padding-bottom: var(--spacing-72);
+
+}
+
+.button{
+display: inline-block;
+    font-family: "Poppins-light", Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--p);
+   padding-top: var(--spacing-12);
+    padding-bottom: var(--spacing-12);
+
+    border-color: var(--accent-color);
+    color: #8b2939;
+    background-color: white;
+    border-style: solid;
+    
+
+    margin-top: var(--spacing-16);
+
+    
+    border-radius: var(--border-radius);
+    border-width: 1px;
+    cursor: pointer;
+}
+
+.button:hover{
+    color: white;
+    transition: 0.25s;
+    background-color: var(--accent-color);
+
+}
+
+p{
+    
+    font-size: var(--h5);
+    color: var(--black);
+    font-family: "Poppins-Light", Helvetica, sans-serif;
+    line-height: 1.8;
+    margin-block-end: 0;
+    margin-block-start: 0;
+
+}
+
+h2 {
+    
+    font-size: var(--h2);
+    font-family: "Belanosima", Helvetica, sans-serif;
+    line-height: 1.2;
+    color: var(--secondary-color);
+        margin-block-end: 0;
+    margin-block-start: 0;
+    font-weight: 100;
+}

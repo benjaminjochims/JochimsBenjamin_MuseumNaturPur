@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" type="text/css" href="style.css">
+            <link rel="stylesheet" type="text/css" href="quiz.css">
+    
+    <title>Museum Natur Pur – Quiz</title>
+  </head>
+  <body>
+      
+<header>
+    <nav aria-label="Hauptnavigation">    
+        <div class="container">
+          <div class="navbar">
+            <figure class="NaturPurLogo">
+              <a href="index.html"><img class="NaturPurLogo" src="IMG/MuseumNaturPurLogo.svg" alt="Museum Natur Pur"></a>
+            </figure>
+              
+              
+              
+              <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+              
+              
+              
+              
+                <ul aria-label="Navigations-Menupunkte">
+                <li class="dropdown-logo">
+                    
+                    <a href="index.html"><img class="NaturPurDropdownLogo" src="IMG/MuseumNaturPurLogo.svg" alt="Museum Natur Pur"></a>
+                </li>
+                  <li><a href="index.html#museum">Museum</a></li>
+                  <li><a href="lehrpfade.html">Lehrpfade</a></li>
+                  <li><a href="https://www.bkgut.de/" target="_blank">Tagung</a></li>
+                </ul>
+              
+          </div>
+        </div>
+    </nav>
+</header> 
+      
+      
+      <div class="body-grid-home">
+          
+          
+          
+        
+
+            <section id="hero">
+          
+                <div class="hero-container-small">
+                    
+                   
+                    
+                    <div class="hero-gradient"></div>
+
+                    
+                    <div class="headline">
+                        
+                        <h1>
+                        <span id="tagline">MUSEUM NATUR PUR</span><br>
+                        <span>5-Sinne Quiz</span>
+                        </h1>
+                        
+                    </div>
+                </div>
+                
+                </section>
+                
+                
+          
+            <main class="teaser">
+                
+                <div class="teaser-bg"></div> 
+                
+                <div class="teaser-container"></div>
+                
+
+                
+                <div class="teaser-text-quiz">
+                    
+                    <div class="welcome-screen-container">
+                        <!-- Begrüßungsfenster -->
+                        <div id="welcome-screen">
+                            <h2>Hallo Naturfreund!</h2>
+                            <p>Super, dass du bei unserem Quiz zur 5-Sinne-Rallye teilnimmst!</p>
+                            <button class="button" onclick="startQuiz()">Starten</button>
+                            <button class="button" onclick="cancelQuiz()">Abbrechen</button>
+                        </div>
+
+                        <!-- Quizfragen -->
+                        <div id="quiz-questions" style="display:none;">
+                            <p id="question-text"></p>
+                            <button class="button" onclick="checkAnswer('a')">Antwort A</button>
+                            <button class="button" onclick="checkAnswer('b')">Antwort B</button>
+                            <button class="button" onclick="checkAnswer('c')">Antwort C</button>
+                        </div>
+
+                        <!-- Feedback-Meldungen -->
+                        <div id="feedback-screen" style="display:none;">
+                            <p id="feedback-text"></p>
+                            <button class="button" onclick="nextQuestion()">Nächste Frage</button>
+                            <button id="retry-button" class="button" style="display:none;" onclick="retryQuestion()">Nochmal</button>
+                        </div>
+
+                        <!-- Ergebnis-Meldung -->
+                        <div id="results-screen" style="display:none;">
+                            <p id="result-message"></p>
+                            <button class="button" onclick="restartQuiz()">Nochmal spielen</button>
+                            <button class="button" onclick="endQuiz()">Quiz beenden</button>
+                        </div>
+                    </div>
+                    
+                <div id="results-screen" style="display:none;">
+                    <p id="result-message"></p>
+                    <form id="save-results-form" method="POST" action="save_results.php">
+                        <input type="hidden" name="username" id="username" value="Anonym">
+                        <input type="hidden" name="score" id="score" value="0">
+                        <input type="hidden" name="total_questions" id="total_questions" value="0">
+                        <button type="submit" class="button">Ergebnis speichern</button>
+                    </form>
+                    <button class="button" onclick="restartQuiz()">Nochmal spielen</button>
+                    <button class="button" onclick="endQuiz()">Quiz beenden</button>
+                </div>
+
+
+                    
+                </div>
+                
+
+                
+                
+
+                
+                
+
+          
+            </main>
+              
+          
+          
+
+          
+          
+
+  
+
+          
+          
+
+          
+    
+          
+          
+          
+          
+            <footer class="footer" aria-label="Fusszeile">
+          
+                <div class="footer-container">
+                
+                      <div class="logo-footer">
+                      <a href="index.html"><img class="MuseumNaturPurLogo-footer" src="IMG/MuseumNaturPurLogo_white.svg" alt="Museum Natur Pur"></a>
+                      </div>
+                    
+                    <div class="footer1">
+                    
+                        Lange Brüdergasse 3 <br>
+                        99947 Bad Langensalza<br>
+                        <br>
+                        Tel: 03603/123434<br>
+                        Fax: 03603/12346<br>
+                        <br>
+                        info@museum-natur-pur.de
+                        
+                    </div>
+                    
+                    <div class="footer2">
+                        
+                        <div class="footer-content">
+                        <ul aria-label="Navigations-Menupunkte">
+                          <li><a href="index.html#aktuelles">Aktuelles</a></li>
+                          <li><a href="index.html#informationen">Informationen</a></li>
+                          <li><a href="index.html#anfahrt">Anfahrt</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="footer3">
+                        <div class="footer-content">
+                        <ul aria-label="Navigations-Menupunkte">
+                          <li><a href="impressum.html">Impressum</a></li>
+                          <li><a href="https://www.bkgut.de/" target="_blank">Datenschutz</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-sm-bar">
+                        
+                              <div class="footer-primary-color">
+                                    <div class="sm-container">
+
+
+                                        <a href="https://www.instagram.com/" target="_blank"><img class="sm-icon" src="IMG/sm-icon-set_instagram.svg" alt=" Instagram"> </a>
+
+                                        <a href="https://www.facebook.com/" target="_blank"><img class="sm-icon" src="IMG/sm-icon-set_facebook.svg" alt=" Facebook"> </a>
+
+                                        <a href="https://www.snapchat.com/" target="_blank"><img class="sm-icon" src="IMG/sm-icon-set_snapchat.svg" alt=" Snapchat"></a>
+
+                                    </div>
+          
+                            </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </footer>
+          
+
+      
+      
+      </div>
+
+      
+      <script src="script.js" defer></script> 
+      
+  </body>
+</html>
